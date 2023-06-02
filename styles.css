@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(152, 195, 201);
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.contain{
+    position: relative;
+}
+
+p{
+    /* height: 15rem;
+    width: 30rem; */
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dialog{
+    border-radius: 50%;
+      padding: 12px;
+      background: rgb(255, 253, 117);
+      color: rgb(16, 60, 23);
+   padding: 20px;
+   position: relative;
+   max-width: 600px;
+   /* height: 300px; */
+   margin: 0 auto;
+   font-family: sans-serif;
+   z-index: 1;
+}
+
+.dialog::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 90px;
+    background: transparent;
+    width: 0px; height: 0px;
+    border-bottom: 40px solid rgb(255, 253, 117);
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    transform: rotate(118deg);
+    z-index: -1;
+    }
+
+
+
+.chuck-norris{
+    cursor: pointer;
+ position: absolute;
+ left: 200px;
+ top: 110px;
+ height: 400px;
+}
