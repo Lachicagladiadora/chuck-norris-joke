@@ -29,27 +29,30 @@ body {
   font-family: monospace;
   font-weight: bold;
   cursor: pointer;
+  font-size: x-large;
 }
 
 .dialog {
   background: rgb(255, 253, 117);
   color: rgb(16, 60, 23);
-  padding: 30px;
+  padding: 34px;
   border-radius: 100px 100px 100px 4px;
   position: relative;
   max-width: 600px;
   font-family: sans-serif;
   z-index: 1;
+  cursor: pointer;
 }
 
 .image-contain {
-  width: 950px;
+  width: 800px;
   display: flex;
-  align-items: start;
+  align-items: center;
 }
 
 .chuck-norris {
   cursor: pointer;
+  margin: auto;
 }
 
 @media screen and (max-width: 768px) {
