@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(152, 195, 201);
   margin: 0;
@@ -12,6 +18,8 @@ body {
 .title {
   text-align: center;
   font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  animation: 5s steps(16, end) present-animation;
 }
 
 .contain {
@@ -42,6 +50,7 @@ body {
   font-family: sans-serif;
   z-index: 1;
   cursor: pointer;
+  border: solid 2px black;
 }
 
 .image-contain {
@@ -68,5 +77,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@keyframes present-animation {
+  0% {
+    color: rgb(152, 195, 201);
+    width: 0px;
+  }
+  100% {
+    color: rgb(72, 80, 80);
+    width: 400px;
   }
 }
