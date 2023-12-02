@@ -20,6 +20,14 @@ body {
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
   animation: 5s steps(16, end) present-animation;
+  overflow: hidden;
+}
+
+.title::after {
+  content: "";
+  background: black;
+  height: 100%;
+  width: 10px;
 }
 
 .contain {
@@ -44,7 +52,7 @@ body {
   background: rgb(255, 253, 117);
   color: rgb(16, 60, 23);
   padding: 34px;
-  border-radius: 100px 100px 100px 4px;
+  border-radius: 100px;
   position: relative;
   max-width: 600px;
   font-family: sans-serif;
@@ -53,8 +61,23 @@ body {
   border: solid 2px black;
 }
 
+.dialog ::before {
+  content: "";
+  background: rgb(255, 253, 117);
+  height: 50px;
+  width: 25px;
+  border: solid 2px black;
+  border-radius: 77% 23% 50% / 70% 67%;
+  border-top: 0px;
+  position: absolute;
+  right: 200px;
+  bottom: -50px;
+  transform: rotate(11deg);
+}
+
 .image-contain {
   width: 800px;
+  margin: auto;
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -64,18 +87,19 @@ body {
 
 .chuck-norris {
   cursor: pointer;
-  margin: auto;
 }
 
 .shadow {
-  width: 300px;
+  width: 250px;
   height: 30px;
   border-radius: 15px;
   background: rgb(75, 75, 75);
   filter: blur(25px);
   z-index: -1;
   position: absolute;
-  bottom: 0px;
+  bottom: -10px;
+  padding-left: 58px;
+  padding-right: 58px;
 }
 
 @media screen and (max-width: 768px) {
@@ -95,12 +119,12 @@ body {
 }
 
 @keyframes present-animation {
-  0% {
+  from {
     color: rgb(152, 195, 201);
-    width: 0px;
+    width: 0%;
   }
-  100% {
+  to {
     color: rgb(72, 80, 80);
-    width: 400px;
+    width: 100%;
   }
 }
