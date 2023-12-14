@@ -53,7 +53,7 @@ body {
   position: relative;
   max-width: 800px;
   /* width: 600px; */
-  min-width: 450px;
+  /* min-width: 450px; */
 }
 
 .dialog {
@@ -112,26 +112,37 @@ body {
 
 @media screen and (max-width: 350px) {
   .phrase {
-    font-size: smaller;
+    font-size: small;
+  }
+  .dialog-contain {
+    max-width: 300px;
   }
   .dialogue-queue {
+    bottom: 50%;
     left: 40%;
+    height: 80px;
+    /* transform: translate(0, 50%); */
   }
+  .chuck-norris {
+    height: 320px;
+  }
+
   .image-contain {
     width: 180px;
-  }
-  .image-contain {
     display: flex;
     align-items: start;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .phrase {
-    font-size: small;
-  }
   .dialogue-queue {
     right: 4%;
+  }
+  .phrase {
+    font-size: x-large;
+  }
+  .dialog-contain {
+    max-width: 500px;
   }
   .image-contain {
     width: 300px;
@@ -142,12 +153,15 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .dialog {
     background: #fffd75;
     padding: 30px;
     border-radius: 100px 100px 100px 100px;
     font-family: sans-serif;
+  }
+  .phrase {
+    font-size: 18px;
   }
 }
 
