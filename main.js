@@ -7,14 +7,25 @@ const dialogElement = document.getElementById("dialog");
 const chuckNorrisUrl = "https://api.chucknorris.io/jokes/random";
 
 //solicitud GET utilizando la API fetch
+textElement.remove;
+const charge = "...";
+textElement.innerText = charge;
 
-fetch(chuckNorrisUrl)
-  .then((response) => response.json())
-  .then((json) => {
-    textElement.innerText = json.value;
-  });
+const joke = () => {
+  fetch(chuckNorrisUrl)
+    .then((response) => response.json())
+    .then((json) => {
+      // console.log(json);
+      console.log(json.value);
+      return !json.value
+        ? (textElement.innerText = charge)
+        : (textElement.innerText = json.value);
+    });
+};
+joke();
 
 const reload = () => {
+  // joke();
   location.reload();
 };
 
@@ -23,7 +34,8 @@ const messageEnter = (event) => {
     event.preventDefault();
     imgElement.click() && dialogElement.click();
   }
-  reload;
+  // joke();
+  reload();
 };
 
 const messageSpace = (e) => {
@@ -31,7 +43,8 @@ const messageSpace = (e) => {
     e.preventDefault();
     imgElement.click() && dialogElement.click();
   }
-  reload;
+  // joke();
+  reload();
 };
 
 imgElement.addEventListener("click", reload);
