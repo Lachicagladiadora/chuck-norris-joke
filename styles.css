@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
 }
 
 .presentation {
@@ -108,22 +109,22 @@ body {
   padding-right: 58px;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 280px) {
   .phrase {
-    font-size: small;
+    font-size: 12px;
   }
   .dialog-contain {
     max-width: 300px;
   }
   .dialogue-queue {
     position: absolute;
-    bottom: -40%;
+    bottom: -26%;
     left: 60%;
     height: 60px;
     width: 120px;
   }
   .chuck-norris {
-    height: 320px;
+    height: 280px;
   }
 
   .image-contain {
@@ -131,9 +132,12 @@ body {
     display: flex;
     align-items: start;
   }
+  .presentation {
+    font-size: 20px;
+  }
 }
 
-@media screen and (min-width: 351px) {
+@media screen and (min-width: 281px) {
   .dialogue-queue {
     right: 4%;
   }
@@ -150,6 +154,12 @@ body {
     display: flex;
     align-items: start;
   }
+  .chuck-norris {
+    height: 320px;
+  }
+  .presentation {
+    font-size: 28px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -160,7 +170,13 @@ body {
     font-family: sans-serif;
   }
   .phrase {
-    font-size: 18px;
+    font-size: 22px;
+  }
+  .chuck-norris {
+    height: 420px;
+  }
+  .presentation {
+    font-size: 34px;
   }
 }
 
