@@ -1,23 +1,40 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(152, 195, 201);
   margin: 0;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.title {
+.presentation {
+  width: 100%;
   text-align: center;
   font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  animation: 1s steps(16, end) present-animation;
+  overflow: hidden;
+}
+
+.presentation::after {
+  content: "";
+  background: black;
+  height: 100%;
+  width: 10px;
 }
 
 .contain {
   position: relative;
   height: max-content;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,41 +46,129 @@ body {
   font-family: monospace;
   font-weight: bold;
   cursor: pointer;
+  font-size: x-large;
+}
+
+.dialog-contain {
+  position: relative;
+  max-width: 800px;
 }
 
 .dialog {
+  width: 100%;
   background: rgb(255, 253, 117);
-  color: rgb(16, 60, 23);
-  padding: 30px;
-  border-radius: 100px 100px 100px 4px;
+  color: black;
+  padding: 34px;
+  border-radius: 100px;
   position: relative;
   max-width: 600px;
   font-family: sans-serif;
   z-index: 1;
+  cursor: pointer;
+  border: solid 2px black;
+  box-shadow: 3px 3px 10px rgba(56, 56, 56, 0.64);
+  &:hover,
+  dialogue-queue {
+    box-shadow: 5px 5px 10px rgba(35, 35, 35, 0.745);
+  }
+}
+
+.dialogue-queue {
+  cursor: pointer;
+  position: absolute;
+  bottom: -96px;
+  right: 16%;
+  z-index: 2;
 }
 
 .image-contain {
-  width: 950px;
+  width: 800px;
+  margin: auto;
   display: flex;
-  align-items: start;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .chuck-norris {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+.shadow {
+  width: 250px;
+  height: 30px;
+  border-radius: 15px;
+  background: rgb(33, 18, 10);
+  filter: blur(25px);
+  z-index: -1;
+  position: absolute;
+  bottom: -10px;
+  padding-left: 58px;
+  padding-right: 58px;
+}
+
+@media screen and (max-width: 350px) {
+  .phrase {
+    font-size: small;
+  }
+  .dialog-contain {
+    max-width: 300px;
+  }
+  .dialogue-queue {
+    bottom: 50%;
+    left: 40%;
+    height: 80px;
+  }
+  .chuck-norris {
+    height: 320px;
+  }
+
+  .image-contain {
+    width: 180px;
+    display: flex;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dialogue-queue {
+    right: 4%;
+  }
+  .phrase {
+    font-size: x-large;
+  }
+  .dialog-contain {
+    max-width: 500px;
+  }
+  .image-contain {
+    width: 300px;
+  }
+  .image-contain {
+    display: flex;
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .dialog {
-    background: rgb(255, 253, 117);
-    color: rgb(16, 60, 23);
+    background: #fffd75;
     padding: 30px;
     border-radius: 100px 100px 100px 100px;
     font-family: sans-serif;
   }
+  .phrase {
+    font-size: 18px;
+  }
+}
 
-  .image-contain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@keyframes present-animation {
+  from {
+    color: rgb(152, 195, 201);
+    width: 0%;
+  }
+  to {
+    color: rgb(72, 80, 80);
+    width: 100%;
   }
 }

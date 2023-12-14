@@ -1,38 +1,28 @@
-const bodyElement = document.getElementById("body");
 const containElement = document.getElementById("contain");
 const textElement = document.getElementById("phrase");
-const buttonImg = document.getElementById("chuck-norris");
+const imgElement = document.getElementById("chuck-norris");
+const dialogElement = document.getElementById("dialog");
+const dialogQueueElement = document.getElementById("dialogue-queue");
 
 const chuckNorrisUrl = "https://api.chucknorris.io/jokes/random";
 
 //solicitud GET utilizando la API fetch
+const joke = () => {
+  textElement.remove;
 
-fetch(chuckNorrisUrl)
-  .then((response) => response.json())
-  .then((json) => {
-    textElement.innerText = json.value;
-  });
+  const charge = "Loading ...";
 
-const reload = () => {
-  location.reload();
+  textElement.innerText = charge;
+
+  fetch(chuckNorrisUrl)
+    .then((response) => response.json())
+    .then((json) => {
+      return !json.value
+        ? (textElement.innerText = charge)
+        : (textElement.innerText = json.value);
+    });
 };
 
-const messageEnter = (event) => {
-  if (event.keyCode == 13 || event.key === "Enter") {
-    event.preventDefault();
-    buttonImg.click();
-  }
-  reload;
-};
-
-const messageSpace = (e) => {
-  if (e.keyCode == 32 || e.key === "Space") {
-    e.preventDefault();
-    buttonImg.click();
-  }
-  reload;
-};
-
-buttonImg.addEventListener("click", reload);
-bodyElement.addEventListener("keyup", messageEnter);
-bodyElement.addEventListener("keyup", messageSpace);
+imgElement.addEventListener("click", joke);
+dialogElement.addEventListener("click", joke);
+dialogQueueElement.addEventListener("click", joke);

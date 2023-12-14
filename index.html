@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Chuck Norris</title>
   </head>
-  <body id="body">
-    <h1 class="title">I'm Chuck Norris</h1>
-
+  <body>
     <div id="contain" class="contain">
-      <div class="dialog">
-        <p id="phrase" class="phrase"></p>
+      <div class="dialog-contain">
+        <div id="dialog" class="dialog">
+          <p id="phrase" class="phrase">
+            Click here or on Chuck to see the next joke
+          </p>
+        </div>
+        <img
+          src="src/images/Polygon 1.svg"
+          alt=""
+          id="dialogue-queue"
+          class="dialogue-queue"
+        />
       </div>
       <div class="image-contain">
         <img
@@ -22,7 +30,9 @@
           alt="chuck-norris-image"
           height="400"
         />
+        <div class="shadow"></div>
       </div>
+      <h1 class="presentation">I'm Chuck Norris</h1>
     </div>
 
     <script src="./main.js"></script>
