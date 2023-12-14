@@ -8,22 +8,23 @@ body {
   background-color: rgb(152, 195, 201);
   margin: 0;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.title {
+.presentation {
+  width: 100%;
   text-align: center;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
-  animation: 5s steps(16, end) present-animation;
+  animation: 3s steps(16, end) present-animation;
   overflow: hidden;
 }
 
-.title::after {
+.presentation::after {
   content: "";
   background: black;
   height: 100%;
@@ -33,7 +34,7 @@ body {
 .contain {
   position: relative;
   height: max-content;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,9 +49,17 @@ body {
   font-size: x-large;
 }
 
+.dialog-contain {
+  position: relative;
+  max-width: 800px;
+  /* width: 600px; */
+  min-width: 300px;
+}
+
 .dialog {
+  width: 100%;
   background: rgb(255, 253, 117);
-  color: rgb(16, 60, 23);
+  color: black;
   padding: 34px;
   border-radius: 100px;
   position: relative;
@@ -59,23 +68,19 @@ body {
   z-index: 1;
   cursor: pointer;
   border: solid 2px black;
-  &:hover {
-    box-shadow: 5px 5px 30px rgb(33, 18, 10);
+  box-shadow: 3px 3px 10px rgba(56, 56, 56, 0.64);
+  &:hover,
+  dialogue-queue {
+    box-shadow: 5px 5px 10px rgba(35, 35, 35, 0.745);
   }
 }
 
-.dialog ::before {
-  content: "";
-  background: rgb(255, 253, 117);
-  height: 50px;
-  width: 25px;
-  border: solid 2px black;
-  border-radius: 77% 23% 50% / 70% 67%;
-  border-top: 0px;
+.dialogue-queue {
+  cursor: pointer;
   position: absolute;
-  right: 200px;
-  bottom: -50px;
-  transform: rotate(11deg);
+  bottom: -96px;
+  right: 16%;
+  z-index: 2;
 }
 
 .image-contain {
@@ -105,19 +110,44 @@ body {
   padding-right: 58px;
 }
 
+@media screen and (max-width: 350px) {
+  .phrase {
+    font-size: smaller;
+  }
+  .dialogue-queue {
+    left: 40%;
+  }
+  .image-contain {
+    width: 180px;
+  }
+  .image-contain {
+    display: flex;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .phrase {
+    font-size: small;
+  }
+  .dialogue-queue {
+    right: 4%;
+  }
+  .image-contain {
+    width: 300px;
+  }
+  .image-contain {
+    display: flex;
+    align-items: start;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .dialog {
-    background: rgb(255, 253, 117);
-    color: rgb(16, 60, 23);
+    background: #fffd75;
     padding: 30px;
     border-radius: 100px 100px 100px 100px;
     font-family: sans-serif;
-  }
-
-  .image-contain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
