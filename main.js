@@ -1,4 +1,3 @@
-const bodyElement = document.getElementById("body");
 const containElement = document.getElementById("contain");
 const textElement = document.getElementById("phrase");
 const imgElement = document.getElementById("chuck-norris");

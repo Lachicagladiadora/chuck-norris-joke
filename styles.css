@@ -52,8 +52,6 @@ body {
 .dialog-contain {
   position: relative;
   max-width: 800px;
-  /* width: 600px; */
-  /* min-width: 450px; */
 }
 
 .dialog {
@@ -121,7 +119,6 @@ body {
     bottom: 50%;
     left: 40%;
     height: 80px;
-    /* transform: translate(0, 50%); */
   }
   .chuck-norris {
     height: 320px;
