@@ -116,9 +116,11 @@ body {
     max-width: 300px;
   }
   .dialogue-queue {
-    bottom: 50%;
-    left: 40%;
-    height: 80px;
+    position: absolute;
+    bottom: -40%;
+    left: 60%;
+    height: 60px;
+    width: 120px;
   }
   .chuck-norris {
     height: 320px;
@@ -131,12 +133,12 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 351px) {
   .dialogue-queue {
     right: 4%;
   }
   .phrase {
-    font-size: x-large;
+    font-size: 16px;
   }
   .dialog-contain {
     max-width: 500px;
