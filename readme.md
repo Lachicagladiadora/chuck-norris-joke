@@ -20,8 +20,11 @@ And deploy with GitHub-Pages
 ![](./src/images/desktop-1.png)
 ![](./src/images/desktop-2.png)
 
+## How to run
 
-## How to run 
 1. Clone this repository.
 2. Install 'Live Server' extention
+   ![](./src/images/live-server.png)
 3. Click on 'Go live' at the bottom left
+   ![](./src/images/run-live-server.png)
+   and it will open in the browser you have open
