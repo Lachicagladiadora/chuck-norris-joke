@@ -1,4 +1,4 @@
-# Practice with Chuck Norris API
+# Chuck Norris Jokes
 
 Practice fetch and promises with only javascript and Chuck Norris API. [view site](https://lachicagladiadora.github.io/first-api-chuck-norris/).
 And deploy with GitHub-Pages
