@@ -3,7 +3,7 @@
 Practice working with the Fetch API and Promises using pure JavaScript, along with styling done entirely in CSS. This project uses the Chuck Norris API for fun and interactive content.
 
 The static site was deploy with GitHub-Pages.
-🔗 [Preview](https://lachicagladiadora.github.io/first-api-chuck-norris/)
+🔗 [Preview](https://lachicagladiadora.github.io/chuck-norris-jokes/)
 
 ## Responsive
 
