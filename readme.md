@@ -7,19 +7,20 @@ The static site was deploy with GitHub-Pages.
 
 ## Responsive
 
+### Desktop
+
+![preview in desktop](./src/images/desktop.png)
+
+### Tablet
+
+![preview in tablet ](./src/images/tablet-1.png)
+
+<!-- ![preview in tablet 2](./src/images/tablet-2.png) -->
+
 ### Mobile
 
 ![preview in mobile](./src/images/mobile-1.png)
 ![preview in mobile](./src/images/mobile-2.png)
-
-### Tablet
-
-![preview in tablet 1](./src/images/tablet-1.png)
-![preview in tablet 2](./src/images/tablet-2.png)
-
-### Desktop
-
-![preview in desktop](./src/images/desktop.png)
 
 ## How to run
 
