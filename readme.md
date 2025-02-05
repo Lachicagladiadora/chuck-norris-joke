@@ -15,8 +15,6 @@ The static site was deploy with GitHub-Pages.
 
 ![preview in tablet ](./src/images/tablet-1.png)
 
-<!-- ![preview in tablet 2](./src/images/tablet-2.png) -->
-
 ### Mobile
 
 ![preview in mobile](./src/images/mobile-1.png)
