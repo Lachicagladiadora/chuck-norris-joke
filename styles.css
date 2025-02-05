@@ -59,10 +59,10 @@ body {
   width: 100%;
   background: rgb(255, 253, 117);
   color: black;
-  padding: 34px;
+  padding: 40px;
   border-radius: 100px;
   position: relative;
-  max-width: 600px;
+  max-width: 700px;
   font-family: sans-serif;
   z-index: 1;
   cursor: pointer;
@@ -80,6 +80,10 @@ body {
   bottom: -96px;
   right: 16%;
   z-index: 2;
+}
+
+.visible {
+  display: none;
 }
 
 .image-contain {
